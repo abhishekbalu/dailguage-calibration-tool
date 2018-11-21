@@ -1,0 +1,41 @@
+<RCC>
+    <qresource prefix="/mcalib/Logo">
+        <file>resource/metrics.png</file>
+        <file>resource/page 1.jpg</file>
+        <file>resource/metric12.png</file>
+    </qresource>
+    <qresource prefix="/mcalib/Menu">
+        <file>resource/about.png</file>
+        <file>resource/aboutus.png</file>
+        <file>resource/add.png</file>
+        <file>resource/delete.png</file>
+        <file>resource/new.png</file>
+        <file>resource/open.png</file>
+        <file>resource/print.png</file>
+        <file>resource/recent.png</file>
+        <file>resource/save.png</file>
+        <file>resource/Save-as.png</file>
+        <file>resource/technical-support.png</file>
+        <file>resource/text.png</file>
+        <file>resource/copyrights1.jpg</file>
+        <file>resource/cut.png</file>
+        <file>resource/exit.png</file>
+        <file>resource/paste.png</file>
+        <file>resource/copy.png</file>
+        <file>resource/addtable.png</file>
+        <file>resource/csv.png</file>
+        <file>resource/delete1.png</file>
+        <file>resource/deletetable.png</file>
+        <file>resource/Import.png</file>
+        <file>resource/locat.png</file>
+        <file>resource/System_Information.png</file>
+        <file>resource/table_clear.png</file>
+        <file>resource/txt_4136.png</file>
+        <file>resource/version.png</file>
+        <file>resource/xlsx.png</file>
+        <file>resource/replace.png</file>
+        <file>resource/tab.png</file>
+        <file>resource/newpage.png</file>
+        <file>resource/toolbar.png</file>
+    </qresource>
+</RCC>

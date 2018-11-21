@@ -1,0 +1,69 @@
+   QString filename;
+    filename =  QFileDialog::getOpenFileName(
+                  this,
+                  "Open Document",
+                  QDir::currentPath(),
+                  "All files (*.*) ;; Document files (*.csv *.rtf);; PNG files (*.png)");
+            if( !filename.isNull() )
+            {
+              qDebug() << "selected file path : " <<filename.toUtf8();
+            }
+            QFileInfo info(filename);
+            QString filename1 = info.path() + "/" + info.completeBaseName() + ".csv";
+              QFile file(filename1.toUtf8());
+              QTextStream in(&file);
+              //int line_count=0;
+                if(!file.open(QIODevice::ReadOnly)) {
+                    QMessageBox::information(this, "error", file.errorString());
+                }
+
+
+
+
+//                while(!in.atEnd())
+//                             {
+//                                QString line=in.readLine();
+//                                QStringList line_data=line.split(",",QString::SkipEmptyParts);
+//                                if(line_data.size() <=520)
+//                                {
+//                              for(int j=0;j<line_data.size();j++)
+//                              {
+//                                  QString m_prop=line_data.at(j);
+//                                  //QStandardItem *item=new QStandardItem(m_prop);  this is for tableview
+//                                  QTableWidgetItem *it=new QTableWidgetItem(m_prop,1002);
+//                                  //model->setItem(line_count,j,item);
+
+//                                  ui->tableWidget->setItem(line_count,j,it);
+//                                  // ui->tableView->setEditTriggers(QAbstractItemView::NoEditTriggers);
+//                             // ui->tableWidget->setItem();
+//                              }
+//                              line_count++;
+//                             }
+//                                if(line_data.size() >=520)
+//                                {
+//                              for(int j=0;j<=520;j++)
+//                              {
+//                                  QString m_prop=line_data.at(j);
+//                                  //QStandardItem *item=new QStandardItem(m_prop);  this is for tableview
+//                                  QTableWidgetItem *it=new QTableWidgetItem(m_prop,1002);
+//                                  //model->setItem(line_count,j,item);
+
+//                                  ui->tableWidget->setItem(line_count,j,it);
+//                                  // ui->tableView->setEditTriggers(QAbstractItemView::NoEditTriggers);
+//                             // ui->tableWidget->setItem();
+//                              }
+//                              for(int j=521;j<line_data.size();j++)
+//                              {
+//                                  QString m_prop=line_data.at(j);
+//                                  //QStandardItem *item=new QStandardItem(m_prop);  this is for tableview
+//                                  QTableWidgetItem *it=new QTableWidgetItem(m_prop,1002);
+//                                  //model->setItem(line_count,j,item);
+
+//                                  ui->tableWidget_2->setItem(line_count,j,it);
+//                                  // ui->tableView->setEditTriggers(QAbstractItemView::NoEditTriggers);
+//                             // ui->tableWidget->setItem();
+//                              }
+//                              line_count++;
+//                             }
+//                }
+                file.close();
